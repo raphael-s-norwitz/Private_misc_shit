@@ -50,9 +50,9 @@ Except with the properties you want to cluster.
 
 The model clusters individual supply side partners FOR A GIVEN PROPERTY based on the following 3 features:
 
-- # of distinct uuids (cookies) / # of impressions
-_ K-L divergence of device-type histograms
-- K-L divergence of location histograms
+    - # of distinct uuids (cookies) / # of impressions
+    - K-L divergence of device-type histograms
+    - K-L divergence of location histograms
 
 For each property, the histogram only includes device-types, locations...etc seen for that property only
 
