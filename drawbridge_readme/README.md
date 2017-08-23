@@ -93,10 +93,14 @@ The 'identifying' elements for this model are SSP and property (since we are clu
 The 'value' features are different for each feature in the model. In short they are the comma separated values in the rows which you actually want to feed into the model.
 
 args:
+
     - `mat`: 2-dimensional list (a parsed CSV file
     - `iden`: the indexes of the 'identifying' features for each row
     - `vals`: the indexes of the 'value' features for each row
+
+
 returns:
+
     - `ledger`: a python dictionary mapping identifying tuples to lists. The lists correspond to different rows of the CSV, and contain lists of relevant values for the model
 
 The optional parameters keys_idx and keys allow the user to define 'key identifiers' (in the case of our model, properties like cnn/foxnews..etc)
@@ -155,21 +159,36 @@ The data directory should contain 'partner' subdirectories, with each subdirecto
 The interval is the time over which the CTR is to be calculated. Say the intervals are all days. the tree should look like this:
 
 <root>
+    
     |_ partner_1
+
         |_day_1
+
         |_day_2
+
         ... 
+
         |_day_n
+
     |_ partner_2
+
         |_day_1
+
         |_day_2
+
         ... 
+
         |_day_n
     |_ ...
+
     |_ partner_n
+
         |_day_1
+
         |_day_2
+
         ... 
+
         |_day_n
      
 The script will then print out the CTRs of the different partners as well as the top CTRs seen, along with other information.
