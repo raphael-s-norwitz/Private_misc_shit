@@ -116,11 +116,13 @@ Basically remove the last two parameters and it will cluster all combinations of
 This function partitions the output of get_indexed_file_mat into smaller dictionaries containing only rows of the original dictionary which match the key-property. 
 
 args:
+
     - `mappying`: (python dictionary) a  mapping tuples of 'identifying features' to lists of lists, each sublist containing values which will be transformed into a feature value.
     - `partitions`: (list) values to 'partition' the dataset by. In our case the feature to partition by is the SSP, and in all the queries I've written, the SSP index is 0.
     - `subpartition_idx`: (int) index of the 'key' in mapping which should be evaluated when partitioning. (defaults to 0 see line above)
 
 returns:
+
     - `ret_mapping`: (python dictionary) This dictionary maps partitions names to dictionaries with the set of <key, value> pairs in 'mapping' whose partitions match the outer dictionary's partition key. 
     - `ret_mapping_keys`: (python dictionary) maps partition names (i.e. 'partitions' is the set of keys) to lists of sub_values for that partition. We are using this to map properties to lists of SSPs who serve their impressions
 
